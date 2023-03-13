@@ -1,0 +1,80 @@
+@import '../../styles/index.scss';
+
+.to-do-page {
+  @include fullViewport();
+  background-color: #292929;
+  display: grid;
+  grid-template-rows: 10rem 1fr;
+  overflow: hidden;
+  position: relative;
+
+  &__header {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    @include fullStretch();
+  }
+
+  &__body {
+    padding: 2rem;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    @include fullStretch();
+
+    .list {
+      @include fullStretch();
+      display: grid;
+      grid-template-rows: 7rem 60rem;
+      padding: 1.5rem;
+
+      &-title {
+        color: white;
+        @include fullStretch();
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-weight: 500;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &-content {
+        width: 100%;
+        height: 40rem;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(7, 3rem);
+        gap: 1.5rem;
+        padding-right: 1rem;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: .7rem;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #1e1e24;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #6649b8;
+        }
+
+        .no-todos {
+          grid-column: 1/-1;
+          grid-row: 1/-3;
+          @include fullStretch();
+          @include flexCenter();
+          text-align: center;
+          padding: 5px 0;
+          font-size: 1.4rem;
+          color: gray;
+        }
+      }
+    }
+  }
+}

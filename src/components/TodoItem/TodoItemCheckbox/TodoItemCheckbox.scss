@@ -1,0 +1,14 @@
+@import '../../../styles/index.scss';
+
+.todo-item-checkbox {
+    @include fullStretch();
+    @include flexCenter();
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    input {
+      cursor: pointer;
+    }
+  }

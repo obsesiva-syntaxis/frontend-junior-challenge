@@ -1,0 +1,49 @@
+@import '../../styles/index.scss';
+
+.make-todo {
+    @include flexCenter();
+    @include fullStretch();
+    
+    &__container {
+        width: 60rem;
+        height: 7rem;
+        @include flexCenter();
+
+        input {
+            width: 40rem;
+            height: 3rem;
+
+            &:focus {
+                outline: .1rem solid #73a773;
+                outline-offset: .1rem;
+            }
+        }
+
+        .btn {
+            color: white;
+            cursor: pointer;
+            margin-left: .5rem;
+            width: 6rem;
+            height: 2rem;
+            background-color: #73a773;
+            border: none;
+            transition: border-color 1s ease;
+
+            &:hover {
+                background-color: rgba(115, 167, 115, 0.609);
+                transition: all .3s ease;
+            }
+        }
+
+        .btn-disabled {
+            color: white;
+            cursor: pointer;
+            margin-left: .5rem;
+            width: 5rem;
+            height: 2rem;
+            background-color: #626262;
+            border: none;
+            transition: border-color 1s ease;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import '../../../styles/index.scss';
+
+.todo-item-delete {
+    @include fullStretch();
+    @include flexCenter();
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    grid-column: 3/4;
+    grid-row: 1/2;
+
+    button {
+        color: white;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: .2rem;
+
+        &:hover {
+            background-color: #974c4c;
+        }
+    }
+}

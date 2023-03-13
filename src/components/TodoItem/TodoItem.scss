@@ -1,0 +1,27 @@
+@import '../../styles/index.scss';
+
+.todo-list-item {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: .7rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  background-color:  white;
+}
+
+.todo-list-item-delete {
+  background: rgb(200, 200, 200);
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.todo-list-item-delete:hover {
+  background: rgb(172, 172, 172);
+}
+
+.todo-checked {
+  text-decoration: line-through;
+}

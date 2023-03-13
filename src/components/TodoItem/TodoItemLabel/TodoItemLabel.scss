@@ -1,0 +1,12 @@
+@import '../../../styles/index.scss';
+
+.todo-item-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include fullStretch();
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
